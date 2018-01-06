@@ -16,7 +16,6 @@ import { AppRoutingModule, routingComponents } from './app.routing';
 import { environment } from '../environments/environment';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthService } from './auth/auth.service';
-import { LoginComponent } from './login/login.component';
 import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
 import { MembersComponent } from './members/members.component';
@@ -33,7 +32,7 @@ import { ListService } from './services/list/list.service';
 
 @NgModule({
   declarations: [
-    AppComponent, SlideComponent, FooterComponent, routingComponents, CoursesComponent, LoginComponent, EmailComponent, SignupComponent, MembersComponent, Login2Component, LoadingSpinnerComponent, ItemsComponent, AddItemComponent
+    AppComponent, SlideComponent, FooterComponent, routingComponents, CoursesComponent, EmailComponent, SignupComponent, MembersComponent, Login2Component, LoadingSpinnerComponent, ItemsComponent, AddItemComponent
   ],
   imports: [
     BrowserModule,
