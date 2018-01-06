@@ -10,11 +10,6 @@ export class ItemService {
   itemsCollection: AngularFirestoreCollection<Item>;
   items: Observable<Item[]>;
   itemDoc: AngularFirestoreDocument<Item>;
-  start2: string;
-
-  startStart (start) {
-    console.log(start);
-  }
 
   constructor(public afs: AngularFirestore) { 
 

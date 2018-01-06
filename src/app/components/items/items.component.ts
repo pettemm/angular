@@ -11,16 +11,12 @@ export class ItemsComponent implements OnInit {
   items: Item[];
   editState: boolean = false;
   itemToEdit: Item;
-  starAt: number = 0;
-  endAt: 2;
 
   constructor(private itemService: ItemService) { }
 
   ngOnInit() {
-    this.itemService.startStart('item 4');
     this.itemService.getItems().subscribe(items => {     
       this.items = items;
-      console.log(this.items[this.starAt]);
     });
   }
 
@@ -42,12 +38,6 @@ export class ItemsComponent implements OnInit {
   clearState(){
     this.editState = false;
     this.itemToEdit = null;
-  }
-
-  onNext(){
-    this.starAt = this.starAt + 2;
-    console.log(this.items[this.starAt]);
-    console.log("hej");
   }
 
 }
