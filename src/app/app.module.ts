@@ -10,12 +10,10 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { SlideComponent } from './slide/slide.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule, routingComponents } from './app.routing';
 import { environment } from '../environments/environment';
 import { AuthService } from './auth/auth.service';
-import { SignupComponent } from './signup/signup.component';
 import { MembersComponent } from './members/members.component';
 import { Login2Component } from './login2/login2.component';
 import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
@@ -30,7 +28,7 @@ import { ListService } from './services/list/list.service';
 
 @NgModule({
   declarations: [
-    AppComponent, SlideComponent, FooterComponent, routingComponents, SignupComponent, MembersComponent, Login2Component, LoadingSpinnerComponent, ItemsComponent, AddItemComponent
+    AppComponent, FooterComponent, routingComponents, MembersComponent, Login2Component, LoadingSpinnerComponent, ItemsComponent, AddItemComponent
   ],
   imports: [
     BrowserModule,
