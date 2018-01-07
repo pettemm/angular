@@ -40,4 +40,8 @@ export class ItemsComponent implements OnInit {
     this.itemToEdit = null;
   }
 
+  onDestroy() {
+
+  }
+
 }

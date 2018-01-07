@@ -12,12 +12,14 @@ import 'rxjs/add/operator/map';
 export class MatComponent implements OnInit {
   itemsRef: AngularFireList<any>;
   items: Observable<any[]>;
+  
   constructor(private db: AngularFireDatabase) {
   this.itemsRef = db.list('messages');
    this.items = this.itemsRef.snapshotChanges().map(changes => {
       return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
     });
   }
+  
   addItem(newName: string) {
     this.itemsRef.push({ text: newName });
   }
@@ -30,8 +32,9 @@ export class MatComponent implements OnInit {
   deleteEverything() {
     this.itemsRef.remove();
   }
-  
+
   ngOnInit() {
+    
   }
 
 }
